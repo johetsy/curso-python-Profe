@@ -3,6 +3,7 @@ class Empleado:
 
     def __init__(self, _name):
         self.__name = _name
+        self.__color = 'Gris'
 
     @property
     def name(self):
@@ -10,6 +11,15 @@ class Empleado:
 
     @name.setter
     def name(self, _name):
+        self.__name = _name
+
+
+    @property
+    def color(self):
+        return self.__color
+    
+    @color.setter
+    def color(self, _name):
         self.__name = _name
 
     @classmethod
