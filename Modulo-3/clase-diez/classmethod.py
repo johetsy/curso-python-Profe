@@ -4,6 +4,7 @@ class Empleado:
     def __init__(self, _name):
         self.__name = _name
         self.__color = 'Gris'
+        self._b = 0
 
     @property
     def name(self):
@@ -29,6 +30,19 @@ class Empleado:
     @classmethod
     def modificar_sueldo_base(cls, _sueldo):
         cls.sueldo_base = _sueldo
+
+
+abc = Empleado("Yo")
+
+print(abc._b)
+
+class T(Empleado):
+    def __init__(self, _name):
+        super().__init__(_name)
+
+c = T('ME')
+
+print(c._b)
     
 
 
